@@ -23,6 +23,8 @@ Route::get('/product-list', [ProductController::class, 'index']);
 Route::get('/category-list', [CategoriesController::class, 'index']);
 
 Route::get('/form-add-product', [ProductController::class, 'create']);
+Route::post('/add-product', [ProductController::class, 'store'])->name('add.product');
+Route::delete('/delete-product/{id}', [ProductController::class, 'destroy'])->name('destroy.product');
 
 Route::post('/add-category', [CategoriesController::class, 'store'])->name('add.category');
 Route::delete('/delete-category/{id}', [CategoriesController::class, 'destroy'])->name('destroy.category');

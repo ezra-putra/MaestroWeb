@@ -3,13 +3,14 @@
 <h3>New Product</h3>
 <div class="card">
     <div class="card-body">
-        <form action="#" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('add.product') }}" method="POST" enctype="multipart/form-data">
+            @csrf
             <div class="col-md-12 mb-1">
                 <div class="col-md-12 mb-1">
                     <label for="myDropzone" class="form-label">
                         <h4>Image</h4>
                     </label>
-                    <input type="file" class="form-control"  name="image[]" accept=".jpeg, .png, .jpg">
+                    <input type="file" class="form-control"  name="image" accept=".jpeg, .png, .jpg">
                 </div>
             </div>
             <div class="col-md-12">

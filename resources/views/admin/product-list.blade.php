@@ -7,7 +7,7 @@
         </a>
     </div>
     <table id="product-table" class="table table-bordered">
-        <thead>
+        <thead class="table-light">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Product Image</th>
@@ -24,7 +24,27 @@
             @foreach ($product as $p)
                 <tr>
                     <td>{{ $counter++ }}</td>
-                    <td></td>
+                    <td><img src="{{ asset("upload/product/$p->id/".$p->image) }}" class="img-thumbnail" style="width:100px"/></td>
+                    <td>{{ $p->name }}</td>
+                    <td>{{ $p->category->name }}</td>
+                    <td>@currency($p->price)</td>
+                    <td>
+                        <a href="#" class="btn btn-icon btn-flat-secondary">
+                            <i data-feather="edit-2"></i>
+                        </a>
+                        <a href="#" class="btn btn-icon btn-flat-secondary">
+                            <i data-feather="eye"></i>
+                        </a>
+                        <form method="POST" action="{{ route('destroy.product', $p->id) }}"
+                            style="display: inline-block">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-icon btn-danger"
+                                onclick="return confirm('Do you want to delete this Transaction (Name: {{ $p->name }})?');">
+                                <i data-feather="trash"></i>
+                            </button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

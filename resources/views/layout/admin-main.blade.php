@@ -105,12 +105,30 @@
     </div>
     <!-- END: Main Menu-->
 
+
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <!-- Dashboard Analytics Start -->
+                @yield('content')
+                <!-- Dashboard Analytics end -->
+
+            </div>
+        </div>
+    </div>
+
     @if (session('success'))
         <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Success</h5>
                     </div>
                     <div class="modal-body">
                         {{ session('success') }}
@@ -130,24 +148,8 @@
             });
         </script>
     @endif
-
-    <!-- BEGIN: Content-->
-    <div class="app-content content ">
-        <div class="content-overlay"></div>
-        <div class="header-navbar-shadow"></div>
-        <div class="content-wrapper container-xxl p-0">
-            <div class="content-header row">
-            </div>
-            <div class="content-body">
-                <!-- Dashboard Analytics Start -->
-                @yield('content')
-                <!-- Dashboard Analytics end -->
-
-            </div>
-        </div>
-    </div>
     <!-- END: Content-->
-    
+
     <!-- BEGIN: Footer-->
     <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
     <!-- END: Footer-->

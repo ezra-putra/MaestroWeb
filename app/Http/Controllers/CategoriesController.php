@@ -90,6 +90,6 @@ class CategoriesController extends Controller
         $category = Category::findOrFail($id);
         $category->delete();
 
-        return redirect()->back()->with('success', 'Item Deleted');
+        return redirect()->back()->with('success', 'Category Deleted!');
     }
 }
