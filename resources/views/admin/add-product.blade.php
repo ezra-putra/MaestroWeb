@@ -3,54 +3,75 @@
 <h3>New Product</h3>
 <div class="card">
     <div class="card-body">
-        <div class="col-md-12 mb-1">
+        <form action="#" method="POST" enctype="multipart/form-data">
             <div class="col-md-12 mb-1">
-                <label for="myDropzone" class="form-label">
-                    <h4>Image</h4>
-                </label>
-                <input type="file" class="form-control"  name="image[]" accept=".jpeg, .png, .jpg" multiple>
+                <div class="col-md-12 mb-1">
+                    <label for="myDropzone" class="form-label">
+                        <h4>Image</h4>
+                    </label>
+                    <input type="file" class="form-control"  name="image[]" accept=".jpeg, .png, .jpg">
+                </div>
             </div>
-        </div>
-
-        <div class="col-md-12">
-            <label class="form-label" for="input-product">Product Name</label>
-            <div class="col-md-12 mb-1">
-                <input type="text" class="form-control" id="input-product"
-                    placeholder="Product Name" name="name" />
+            <div class="col-md-12">
+                <label class="form-label" for="input-product">Product Name</label>
+                <div class="col-md-12 mb-1">
+                    <input type="text" class="form-control" id="input-product"
+                        placeholder="Product Name" name="name" />
+                </div>
             </div>
-        </div>
-
-        <div class="col-md-12 mb-1">
-            <label class="form-label" for="select-cat">Category</label>
-            <select class="select2 form-select" id="select-cat" name="cat">
-                <option value="">--Choose Category--</option>
-                <option value="Sound System">Sound System</option>
-                <option value="Band">Band</option>
-                <option value="Live Streaming">Live Streaming</option>
-                <option value="Lighting">Lighting</option>
-                <option value="Backdrop">Backdrop</option>
-            </select>
-        </div>
-
-        <div class="col-md-12 mb-1">
-            <label class="form-label" for="idr-input">Price</label>
             <div class="col-md-12 mb-1">
-                <input type="text" class="form-control" id="idr-input" placeholder="Set Price"
-                    name="price" />
+                <label class="form-label" for="select-cat">Category</label>
+                <select class="select2 form-select" id="select-cat" name="cat">
+                    <option value="">--Choose Category--</option>
+                    @foreach ($category as $c)
+                        <option value="{{ $c->id }}">{{ $c->name }}</option>
+                    @endforeach
+                </select>
             </div>
-        </div>
-
-        <div class="col-md-12">
             <div class="col-md-12 mb-1">
-                <div class="col-md-12">
-                    <label class="form-label" for="description">Description</label>
-                    <div class="col-md-12 mb-2">
-                        <textarea name="desc" id="description" class="form-control" placeholder="Product Description" cols="30"
-                            rows="5"></textarea>
+                <label class="form-label" for="idr-input">Price</label>
+                <div class="col-md-12 mb-1">
+                    <input type="text" class="form-control" id="idr-input" placeholder="Set Price"
+                        name="price" />
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-12 mb-1">
+                    <div class="col-md-12">
+                        <label class="form-label" for="description">Description</label>
+                        <div class="col-md-12 mb-2">
+                            <textarea name="desc" id="description" class="form-control" placeholder="Product Description" cols="30"
+                                rows="4"></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="col-md-12">
+                <div class="col-md-12 mb-1">
+                    <div class="col-md-12">
+                        <label class="form-label" for="term">Product Terms</label>
+                        <div class="col-md-12 mb-2">
+                            <textarea name="terms" id="term" class="form-control" placeholder="Product Terms" cols="30"
+                                rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-12 mb-1">
+                    <div class="col-md-12">
+                        <label class="form-label" for="information">Information(Optional)</label>
+                        <div class="col-md-12 mb-2">
+                            <textarea name="inf" id="informatio" class="form-control" placeholder="Information" cols="30"
+                                rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button type="submit" name="action" value="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
     </div>
 </div>
 

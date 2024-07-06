@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\ProductController;
+use Doctrine\DBAL\Schema\Index;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,14 +19,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/admin-dashboard', function () {
     return view('admin.dashboard');
 });
+Route::get('/product-list', [ProductController::class, 'index']);
+Route::get('/category-list', [CategoriesController::class, 'index']);
 
-Route::get('/product-list', function () {
-    return view('admin.product-list');
-});
+Route::get('/form-add-product', [ProductController::class, 'create']);
 
-Route::get('/add-product', function () {
-    return view('admin.add-product');
-});
+Route::post('/add-category', [CategoriesController::class, 'store'])->name('add.category');
+Route::delete('/delete-category/{id}', [CategoriesController::class, 'destroy'])->name('destroy.category');
 
 
 
