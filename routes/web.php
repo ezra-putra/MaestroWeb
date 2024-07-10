@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProductController;
 use Doctrine\DBAL\Schema\Index;
 use Illuminate\Support\Facades\Route;
@@ -15,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/', [MainController::class, 'index']);
 
 Route::get('/admin-dashboard', function () {
     return view('admin.dashboard');
