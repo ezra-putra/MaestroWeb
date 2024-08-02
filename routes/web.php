@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [MainController::class, 'index']);
+Route::get('/price-list/soundsystem', [MainController::class, 'soundSystem']);
+Route::get('/price-list/lighting', [MainController::class, 'lighting']);
 
 Route::get('/admin-dashboard', function () {
     return view('admin.dashboard');

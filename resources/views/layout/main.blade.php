@@ -67,7 +67,7 @@
         <section class="section py-5 border-top border-2">
             <div class="r-container">
                 <div class="d-flex flex-column justify-content-center align-items-center text-center">
-                    <h3 class="font-2 mb-3">SUDAH SIAP MEMBUAT EVENT ? AYO MEMBUAT EVENT BERSAMA KAMI!</h3>
+                    <h4 class="font-2 mb-3">SUDAH SIAP MEMBUAT EVENT? AYO MEMBUAT EVENT BERSAMA KAMI!</h4>
                     <div class="col">
                         <div class="row">
                             <div class="col-md-4 mb-3">

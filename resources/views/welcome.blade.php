@@ -76,7 +76,7 @@ style="background-image: url({{ asset('/image/welcome-bg.jpg') }}); height: 90vh
                             nec ullamcorper mattis
                         </p>
                         <div class="ms-4">
-                            <a href="#" class="btn btn-outline-warning">
+                            <a href="/price-list/soundsystem" class="btn btn-outline-warning">
                                 <span style="color: white">Cek Harga&nbsp;&nbsp;</span>
                                 <i class="fa fa-arrow-right" style="color: white" aria-hidden="true"></i>
                             </a>
@@ -95,7 +95,7 @@ style="background-image: url({{ asset('/image/welcome-bg.jpg') }}); height: 90vh
                             nec ullamcorper mattis
                         </p>
                         <div class="ms-4">
-                            <a href="#" class="btn btn-outline-warning">
+                            <a href="/price-list/lighting" class="btn btn-outline-warning">
                                 <span style="color: white">Cek Harga&nbsp;&nbsp;</span>
                                 <i class="fa fa-arrow-right" style="color: white" aria-hidden="true"></i>
                             </a>
