@@ -44,7 +44,7 @@
                                     LAYANAN KAMI
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="portfolio.html">PRICE LIST</a></li>
+                                    <li><a class="dropdown-item" href="/pricelist">PRICE LIST</a></li>
                                     <li><a class="dropdown-item" href="project_detail.html">CARA PEMESANAN</a></li>
                                 </ul>
                             </li>

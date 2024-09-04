@@ -16,11 +16,17 @@ class MainController extends Controller
         return view('welcome');
     }
 
+    public function priceList()
+    {
+        $product = Product::all();
+        return view('product.pricelist', compact('product'));
+    }
+
     public function detail($id)
     {
         $product = Product::findOrFail($id);
-
-        return view('product.details', compact('product'));
+        $recProduct = Product::where('id', '!=' , $id)->get();
+        return view('product.details', compact('product', 'recProduct'));
     }
 
     public function soundSystem()

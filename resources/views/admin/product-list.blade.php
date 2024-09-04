@@ -29,11 +29,8 @@
                     <td>{{ $p->category->name }}</td>
                     <td>@currency($p->price)</td>
                     <td>
-                        <a href="#" class="btn btn-icon btn-flat-secondary">
+                        <a href="{{ url('/form-edit-product', $p->id) }}" class="btn btn-icon btn-flat-secondary">
                             <i data-feather="edit-2"></i>
-                        </a>
-                        <a href="#" class="btn btn-icon btn-flat-secondary">
-                            <i data-feather="eye"></i>
                         </a>
                         <form method="POST" action="{{ route('destroy.product', $p->id) }}"
                             style="display: inline-block">

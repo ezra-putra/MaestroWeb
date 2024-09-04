@@ -7,7 +7,7 @@
             <p>
                 Kami menyediakan Sound System, Lighting, Multimedia, LED Videotron, Genset, Stage, Rigging, dan lain-lain.
             </p>
-            <div class="row row-cols-1 row-cols-lg-3 text-start">
+            <div class="row row-cols-1 row-cols-lg-4 text-start">
                 @foreach ($product as $p)
                 <div class="col mb-3">
                     <div class="d-flex flex-column gap-3">
@@ -21,8 +21,7 @@
                                 @currency($p->price)
                             </p>
                             <div>
-                                <a href="#"
-                                    class="px-4 py-2 btn button accent-color button-outline rounded-0 fw-bold font-1">
+                                <a href="{{ url('/details', $p->id) }}" class="px-4 py-2 btn button accent-color button-outline rounded-0 fw-bold font-1">
                                     Detail
                                 </a>
                             </div>
