@@ -36,6 +36,9 @@ Route::post('/add-product', [ProductController::class, 'store'])->name('add.prod
 Route::delete('/delete-product/{id}', [ProductController::class, 'destroy'])->name('destroy.product');
 Route::get('/form-edit-product/{id}', [ProductController::class, 'edit']);
 Route::put('/edit-product/{id}', [ProductController::class, 'update'])->name('edit.product');
+Route::get('/cart', function() {
+    return view('product.cart');
+});
 
 Route::post('/add-category', [CategoriesController::class, 'store'])->name('add.category');
 Route::delete('/delete-category/{id}', [CategoriesController::class, 'destroy'])->name('destroy.category');
